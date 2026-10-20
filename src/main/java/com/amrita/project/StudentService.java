@@ -31,5 +31,6 @@ public class StudentService {
             throw new ResponseStatusException(HttpStatus.CONFLICT,"Student with this email already exists");
         }
         return studentRepository.save(student);
+
     }
 }
