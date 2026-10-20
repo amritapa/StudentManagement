@@ -30,6 +30,7 @@ public class StudentService {
         if(studentRepository.existsByEmail(student.getEmail())){
             throw new ResponseStatusException(HttpStatus.CONFLICT,"Student with this email already exists");
         }
+
         return studentRepository.save(student);
 
     }
